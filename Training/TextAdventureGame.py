@@ -16,7 +16,7 @@ def menu(list, question):
 # Give the computer some basic information about the room:
 items = ["plant", "painting", "vase", "lampshade", "shoe", "door"]
 
-# The key is in the vase (or entry number 2 in the list above):
+# The key location is randomly generated:
 keylocation = random.randint(1, (len(items) - 2))
 
 # You haven't found the key:
