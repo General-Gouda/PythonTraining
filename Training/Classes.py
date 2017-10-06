@@ -9,16 +9,18 @@ class Student:
     #     students.append(student)
     school_name = "Springfield Elementary"
 
-    def __init__(self, name, student_id=332): 
-        self.name = name
+    def __init__(self, firstName, lastName, student_id=332):
+        self.firstname = firstName
+        self.lastname = lastName
+        self.fullname = firstName + " " + lastName
         self.student_id = student_id
         students.append(self)
 
     def __str__(self):
-        return "Student: " + self.name
+        return "Student: " + self.fullname
 
     def get_name_capitalize(self):
-        return self.name.capitalize()
+        return self.fullname.title()
 
     def get_school_name(self):
         return self.school_name
@@ -58,7 +60,7 @@ class HighSchoolStudent(Student): # Derived class HighSchoolStudent inherits cla
 
 #####################################
 
-james = HighSchoolStudent("james")
+james = HighSchoolStudent("james","dean")
 
 print(james.get_name_capitalize())
 # print(james.get_school_name())
